@@ -1,0 +1,14 @@
+.idea/
+yarn-error.log
+
+#env
+.env
+
+#build
+build/
+
+#node
+node/
+
+#node_nodules
+node_modules/
