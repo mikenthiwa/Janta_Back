@@ -1,0 +1,39 @@
+{
+  "name": "Janta_Back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mikenthiwa/Janta_Back.git",
+  "author": "mike",
+  "license": "MIT",
+  "scripts": {
+    "lint": "npx eslint src",
+    "start:dev": "nodemon --exec 'npx eslint src && node node_modules/.bin/babel-node src/server/index.js'",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "yarn run clean && npm run build-babel",
+    "start": "yarn install && yarn run build && node ./build/server/index.js",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:migrate:undo": "npx sequelize db:migrate:undo"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "logger": "^0.0.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "pg": "^7.10.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.7.6"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.0.0",
+    "eslint": "^5.16.0",
+    "logger": "^0.0.1",
+    "nodemon": "^1.18.11"
+  }
+}
