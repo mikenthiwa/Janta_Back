@@ -30,6 +30,7 @@ module.exports = {
 			'always'
 		],
 		'no-console': 1,
+		"no-mixed-spaces-and-tabs": [2, "smart-tabs"]
 	},
 
 };

@@ -4,7 +4,7 @@ module.exports = {
 	development: {
 		use_env_variable: 'DATABASE_URL',
 		username: environment.database.database_username,
-		database: environment.database.database,
+		database: environment.database.database_name,
 		password: environment.database.database_password,
 		host: '127.0.0.1',
 		dialect: 'postgres'
